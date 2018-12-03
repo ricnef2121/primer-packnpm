@@ -1,0 +1,38 @@
+{
+  "name": "primer-packnpm",
+  "version": "0.1.0",
+  "description": "prueba de publicacion de paquetes en npm",
+  "main": "build/index.js",
+  "scripts": {
+    "lint": "eslint lib/index.js",
+    "prebuild": "npm run lint",
+    "build": "babel lib --out-dir build",
+    "pretest": "npm run build",
+    "test": "babel-node test/index.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricnef2121/primer-packnpm.git"
+  },
+  "keywords": [
+    "primer",
+    "publicacion",
+    "de",
+    "node"
+  ],
+  "author": "RNLC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricnef2121/primer-packnpm/issues"
+  },
+  "homepage": "https://github.com/ricnef2121/primer-packnpm#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  }
+}
